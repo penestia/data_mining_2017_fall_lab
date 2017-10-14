@@ -12,6 +12,8 @@ W - words
 l - letter
 """
 
+from stop_words import get_stop_words
+
 def format_rows(docs):
     """ format the text field and strip special characters """
     D = []
@@ -30,7 +32,7 @@ def check_missing_values(row):
     for element in row:
         if element == True:
             counter+=1
-    return ("The amoung of missing records is: ", counter)
+    return ("The amount of missing records is: ", counter)
 
 def tokenize_text(text, remove_stopwords=False):
     """
@@ -42,3 +44,4 @@ def tokenize_text(text, remove_stopwords=False):
             # filters here
             tokens.append(word)
     return tokens
+
