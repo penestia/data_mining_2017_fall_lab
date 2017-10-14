@@ -48,20 +48,22 @@ def plot_comp(wordlist1, wordlist2):
     category_counts = go.Bar(
         x=list(wordlist1[0]),
         y=list(wordlist1[1]),
+        name = 'category',
         text=list(wordlist1[1]),
         textposition = 'auto',
         marker=dict(
-            color='rgb(158,202,225)',
+            color='rgb(255,0,0)',
             line=dict(
                 color='rgb(8,48,107)',
                 width=1.5),
             ),
-        opacity=0.6
+        opacity=0.8
     )
 
     sample_category_counts = go.Bar(
         x=list(wordlist2[0]),
         y=list(wordlist2[1]),
+        name = 'category samples',
         text=list(wordlist2[1]),
         textposition = 'auto',
         marker=dict(
@@ -70,7 +72,7 @@ def plot_comp(wordlist1, wordlist2):
                 color='rgb(8,48,107)',
                 width=1.5),
             ),
-        opacity=0.6
+        opacity=0.8
     )
 
     return category_counts, sample_category_counts

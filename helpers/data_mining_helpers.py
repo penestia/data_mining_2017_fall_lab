@@ -13,6 +13,9 @@ l - letter
 """
 
 from stop_words import get_stop_words
+from nltk.corpus import stopwords
+
+stopWords = stopwords.words('english')
 
 def format_rows(docs):
     """ format the text field and strip special characters """
@@ -44,4 +47,13 @@ def tokenize_text(text, remove_stopwords=False):
             # filters here
             tokens.append(word)
     return tokens
+
+
+
+        
+        
+        
+        
+       
+   
 
