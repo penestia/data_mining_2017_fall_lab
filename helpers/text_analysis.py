@@ -37,7 +37,28 @@ def plot_word_frequency(word_list, plot_title):
 
     layout = {
         "title": plot_title,
-        "yaxis": {"title": "Frequency"}
+        "yaxis": {"title": "Frequency"},
+        
+    }
+
+    fig = go.Figure(data = data, layout=layout)
+    return fig
+
+def red_plot_word_frequency(word_list, plot_title):
+    trace1 = {
+        "x": list(word_list[0]),
+        "y": list(word_list[1]),
+        "type": "bar"
+        
+    }
+    
+
+    data = go.Data([trace1])
+
+    layout = {
+        "title": plot_title,
+        "yaxis": {"title": "Frequency", "range": [0,10]},
+        "xaxis": {"range":[0,25000]}
     }
 
     fig = go.Figure(data = data, layout=layout)
